@@ -9,5 +9,5 @@ so if you have a c2duo, you'd set IOCPUNumber=1 if you have an i7 you'd set IOCP
 
 (the # starts @ 0)
 
-Credit: Cosmosis Jones (origin version for Intel)
+Credit: Cosmosis Jones (origin version for Intel)<br/>
             fumoboy007 (modified version for AMD)
