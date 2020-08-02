@@ -1,0 +1,5 @@
+.DS_Store
+build/
+Distribute/
+VoodooTSCSync.xcodeproj/project.xcworkspace/
+VoodooTSCSync.xcodeproj/xcuserdata/
