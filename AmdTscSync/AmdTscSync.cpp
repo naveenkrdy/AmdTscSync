@@ -2,8 +2,11 @@
 
 OSDefineMetaClassAndStructors(AmdTscSync, IOService)
 
-// Define my superclass
-#define super IOService
+// Stamp the TSC
+extern "C" void stamp_tsc(void *tscp)
+{
+    wrmsr64(MSR_TSC, *(uint64_t*)tscp);
+}
 
 bool AmdTscSync::start(IOService *provider)
 {
@@ -74,10 +77,4 @@ void AmdTscSync::syncTSC()
     
     // Reset the timer
     myTimer->setTimeoutMS(SYNC_INTERVAL);
-}
-
-// Stamp the TSC
-extern "C" void stamp_tsc(void *tscp)
-{
-    wrmsr64(MSR_TSC, *(uint64_t*)tscp);
 }
