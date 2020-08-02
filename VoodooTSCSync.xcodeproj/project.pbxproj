@@ -7,29 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1571F4720AF477D005FA482 /* VoodooTSCSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1571F4420AF477D005FA482 /* VoodooTSCSync.cpp */; };
-		C1571F4920AF477D005FA482 /* VoodooTSCSync.h in Headers */ = {isa = PBXBuildFile; fileRef = C1571F4620AF477D005FA482 /* VoodooTSCSync.h */; };
 		C1571F5920AF4A21005FA482 /* VoodooTSCSyncAMD.h in Headers */ = {isa = PBXBuildFile; fileRef = C1571F4020AF4773005FA482 /* VoodooTSCSyncAMD.h */; };
 		C1571F5C20AF4C79005FA482 /* VoodooTSCSyncAMD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1571F5B20AF4C79005FA482 /* VoodooTSCSyncAMD.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		32D94FD00562CBF700B6AF17 /* VoodooTSCSync.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoodooTSCSync.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1571F4020AF4773005FA482 /* VoodooTSCSyncAMD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoodooTSCSyncAMD.h; path = AMD/VoodooTSCSyncAMD.h; sourceTree = "<group>"; };
-		C1571F4420AF477D005FA482 /* VoodooTSCSync.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VoodooTSCSync.cpp; path = Intel/VoodooTSCSync.cpp; sourceTree = "<group>"; };
-		C1571F4620AF477D005FA482 /* VoodooTSCSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoodooTSCSync.h; path = Intel/VoodooTSCSync.h; sourceTree = "<group>"; };
 		C1571F5720AF49A3005FA482 /* VoodooTSCSyncAMD.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoodooTSCSyncAMD.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1571F5B20AF4C79005FA482 /* VoodooTSCSyncAMD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VoodooTSCSyncAMD.cpp; path = AMD/VoodooTSCSyncAMD.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		32D94FCB0562CBF700B6AF17 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C1571F5220AF49A3005FA482 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,7 +32,6 @@
 			isa = PBXGroup;
 			children = (
 				C1571F2C20AF452F005FA482 /* AMD */,
-				247142CAFF3F8F9811CA285C /* Intel */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
 			);
 			name = VoodooTSCSync;
@@ -53,19 +40,9 @@
 		19C28FB6FE9D52B211CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				32D94FD00562CBF700B6AF17 /* VoodooTSCSync.kext */,
 				C1571F5720AF49A3005FA482 /* VoodooTSCSyncAMD.kext */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		247142CAFF3F8F9811CA285C /* Intel */ = {
-			isa = PBXGroup;
-			children = (
-				C1571F4420AF477D005FA482 /* VoodooTSCSync.cpp */,
-				C1571F4620AF477D005FA482 /* VoodooTSCSync.h */,
-			);
-			name = Intel;
 			sourceTree = "<group>";
 		};
 		C1571F2C20AF452F005FA482 /* AMD */ = {
@@ -80,14 +57,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		32D94FC50562CBF700B6AF17 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1571F4920AF477D005FA482 /* VoodooTSCSync.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C1571F4D20AF49A3005FA482 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,26 +68,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		32D94FC30562CBF700B6AF17 /* VoodooTSCSync */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "VoodooTSCSync" */;
-			buildPhases = (
-				32D94FC50562CBF700B6AF17 /* Headers */,
-				32D94FC70562CBF700B6AF17 /* Resources */,
-				32D94FC90562CBF700B6AF17 /* Sources */,
-				32D94FCB0562CBF700B6AF17 /* Frameworks */,
-				32D94FCC0562CBF700B6AF17 /* Rez */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = VoodooTSCSync;
-			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
-			productName = VoodooTSCSync;
-			productReference = 32D94FD00562CBF700B6AF17 /* VoodooTSCSync.kext */;
-			productType = "com.apple.product-type.kernel-extension.iokit";
-		};
 		C1571F4C20AF49A3005FA482 /* VoodooTSCSyncAMD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1571F5420AF49A3005FA482 /* Build configuration list for PBXNativeTarget "VoodooTSCSyncAMD" */;
@@ -158,20 +107,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				32D94FC30562CBF700B6AF17 /* VoodooTSCSync */,
 				C1571F4C20AF49A3005FA482 /* VoodooTSCSyncAMD */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		32D94FC70562CBF700B6AF17 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C1571F4F20AF49A3005FA482 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,13 +123,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXRezBuildPhase section */
-		32D94FCC0562CBF700B6AF17 /* Rez */ = {
-			isa = PBXRezBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C1571F5320AF49A3005FA482 /* Rez */ = {
 			isa = PBXRezBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,14 +133,6 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		32D94FC90562CBF700B6AF17 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1571F4720AF477D005FA482 /* VoodooTSCSync.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C1571F5020AF49A3005FA482 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,46 +144,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1DEB91DA08733DB10010E9CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0.0d1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = Intel/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MODULE_NAME = com.yourcompany.driver.VoodooTSCSync;
-				MODULE_VERSION = 1.0.0d1;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.voodoo.driver.${PRODUCT_NAME:rfc1034Identifier}";
-				PRODUCT_NAME = VoodooTSCSync;
-				WRAPPER_EXTENSION = kext;
-			};
-			name = Debug;
-		};
-		1DEB91DB08733DB10010E9CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0.0d1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_MODEL_TUNING = G5;
-				INFOPLIST_FILE = Intel/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MODULE_NAME = com.yourcompany.driver.VoodooTSCSync;
-				MODULE_VERSION = 1.0.0d1;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.voodoo.driver.${PRODUCT_NAME:rfc1034Identifier}";
-				PRODUCT_NAME = VoodooTSCSync;
-				WRAPPER_EXTENSION = kext;
-			};
-			name = Release;
-		};
 		1DEB91DE08733DB10010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -377,15 +263,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "VoodooTSCSync" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DEB91DA08733DB10010E9CD /* Debug */,
-				1DEB91DB08733DB10010E9CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "VoodooTSCSync" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
