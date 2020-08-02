@@ -15,7 +15,6 @@
 
 /* Begin PBXFileReference section */
 		32D94FD00562CBF700B6AF17 /* VoodooTSCSync.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoodooTSCSync.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DA8362C06AD9B9200E5AC22 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
 		C1571F4020AF4773005FA482 /* VoodooTSCSyncAMD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoodooTSCSyncAMD.h; path = AMD/VoodooTSCSyncAMD.h; sourceTree = "<group>"; };
 		C1571F4420AF477D005FA482 /* VoodooTSCSync.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VoodooTSCSync.cpp; path = Intel/VoodooTSCSync.cpp; sourceTree = "<group>"; };
 		C1571F4620AF477D005FA482 /* VoodooTSCSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoodooTSCSync.h; path = Intel/VoodooTSCSync.h; sourceTree = "<group>"; };
@@ -46,7 +45,6 @@
 			children = (
 				C1571F2C20AF452F005FA482 /* AMD */,
 				247142CAFF3F8F9811CA285C /* Intel */,
-				8DA8362C06AD9B9200E5AC22 /* Kernel.framework */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
 			);
 			name = VoodooTSCSync;
