@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>OSBundleCompatibleVersion</key>
+	<string>1.0</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
+	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleGetInfoString</key>
-	<string>${MODULE_VERSION}, Copyright 2009 Cosmo1t and 2010 fumoboy007</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -16,24 +16,33 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MODULE_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<string>$(MODULE_VERSION)</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>VoodooTSCSyncAMD</key>
+		<key>AmdTscSync</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>${MODULE_NAME}</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>IOClass</key>
 			<string>${PRODUCT_NAME}</string>
 			<key>IOMatchCategory</key>
 			<string>${PRODUCT_NAME}</string>
+			<key>IOPropertyMatch</key>
+			<dict>
+				<key>IOCPUNumber</key>
+				<integer>1</integer>
+			</dict>
 			<key>IOProviderClass</key>
 			<string>AppleACPICPU</string>
 		</dict>
 	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2020 Cosmo1t fumoboy007</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.kpi.iokit</key>
