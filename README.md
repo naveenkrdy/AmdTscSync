@@ -1,13 +1,9 @@
-# VoodooTSCSync
-Fork of VoodooTSCSync
+## AmdTscSync
 
-A kernel extension which will synchronize the TSC on any intel cpus.
+> *Fork of VoodooTSCSync from [denskop](https://github.com/denskop/VoodooTSCSync) with custom modifications for AMD.*
 
-The Kext matches using IOCPUNumber in the Info.plist
+A kernel extension which will synchronize the TSC on any AMD CPU.
 
-so if you have a c2duo, you'd set IOCPUNumber=1 if you have an i7 you'd set IOCPUNumber=7
+### Usage
 
-(the # starts @ 0)
-
-Credit: Cosmosis Jones (origin version for Intel)<br/>
-            fumoboy007 (modified version for AMD)
+Set the `IOCPUNumber` to `nCPUThreads-1` in `VoodooTSCSyncAMD.kext/Contents/Info.plist`.

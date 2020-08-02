@@ -16,6 +16,7 @@
 		01A7321024D70B5800BC4D24 /* AmdTscSync.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AmdTscSync.cpp; sourceTree = "<group>"; };
 		01A7321124D70B5800BC4D24 /* AmdTscSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmdTscSync.h; sourceTree = "<group>"; };
 		01A7321224D70B5800BC4D24 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01A7321724D711F500BC4D24 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C1571F5720AF49A3005FA482 /* AmdTscSync.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmdTscSync.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -43,6 +44,7 @@
 		089C166AFE841209C02AAC07 /* VoodooTSCSync */ = {
 			isa = PBXGroup;
 			children = (
+				01A7321724D711F500BC4D24 /* README.md */,
 				01A7320F24D70B5800BC4D24 /* AmdTscSync */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
 			);
