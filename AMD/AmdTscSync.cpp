@@ -1,15 +1,15 @@
-#include "VoodooTSCSyncAMD.h"
+#include "AmdTscSync.h"
 
-OSDefineMetaClassAndStructors(org_voodoo_driver_VoodooTSCSyncAMD, IOService)
+OSDefineMetaClassAndStructors(AmdTscSync, IOService)
 
 // Define my superclass
 #define super IOService
 
-bool org_voodoo_driver_VoodooTSCSyncAMD::start(IOService *provider)
+bool AmdTscSync::start(IOService *provider)
 {
     bool result;
     
-    IOLog("VoodooTSCSyncAMD: Starting...\n");
+    IOLog("AmdTscSync: Starting...\n");
     
     result = super::start(provider);
     
@@ -18,23 +18,23 @@ bool org_voodoo_driver_VoodooTSCSyncAMD::start(IOService *provider)
         myWorkLoop = getWorkLoop();
         
         // Create IOKit timer
-        myTimer = IOTimerEventSource::timerEventSource(this, OSMemberFunctionCast(IOTimerEventSource::Action, this, &org_voodoo_driver_VoodooTSCSyncAMD::syncTSC));
+        myTimer = IOTimerEventSource::timerEventSource(this, OSMemberFunctionCast(IOTimerEventSource::Action, this, &AmdTscSync::syncTSC));
         
         if (!myTimer)
         {
-            IOLog("VoodooTSCSyncAMD: Failed to create timer event source\n");
+            IOLog("AmdTscSync: Failed to create timer event source\n");
             result = false;
             break;
         }
         
         if (myWorkLoop->addEventSource(myTimer) != kIOReturnSuccess)
         {
-            IOLog("VoodooTSCSyncAMD: Failed to add timer event source to workloop\n");
+            IOLog("AmdTscSync: Failed to add timer event source to workloop\n");
             result = false;
             break;
         }
         
-        IOLog("VoodooTSCSyncAMD: Syncing TSC every %d seconds.\n", SYNC_INTERVAL / 1000);
+        IOLog("AmdTscSync: Syncing TSC every %d seconds.\n", SYNC_INTERVAL / 1000);
         myTimer->setTimeoutMS(SYNC_INTERVAL);
         
         break;
@@ -43,9 +43,9 @@ bool org_voodoo_driver_VoodooTSCSyncAMD::start(IOService *provider)
     return result;
 }
 
-void org_voodoo_driver_VoodooTSCSyncAMD::stop(IOService *provider)
+void AmdTscSync::stop(IOService *provider)
 {
-    IOLog("VoodooTSCSyncAMD: Stopping...\n");
+    IOLog("AmdTscSync: Stopping...\n");
     
     // Clean up
     if (myTimer)
@@ -60,13 +60,13 @@ void org_voodoo_driver_VoodooTSCSyncAMD::stop(IOService *provider)
 }
 
 // Update MSR on all processors
-void org_voodoo_driver_VoodooTSCSyncAMD::syncTSC()
+void AmdTscSync::syncTSC()
 {
     // Get the current TSC
     uint64_t tsc = rdtsc64();
     
 #ifdef DEBUG
-    IOLog("VoodooTSCSyncAMD: Current TSC is %lld. Rendezvousing...\n", tsc);
+    IOLog("AmdTscSync: Current TSC is %lld. Rendezvousing...\n", tsc);
 #endif
     
     // Call the kernel function that will call this "action" on all cores/processors
