@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1571F5920AF4A21005FA482 /* VoodooTSCSyncAMD.h in Headers */ = {isa = PBXBuildFile; fileRef = C1571F4020AF4773005FA482 /* VoodooTSCSyncAMD.h */; };
-		C1571F5C20AF4C79005FA482 /* VoodooTSCSyncAMD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1571F5B20AF4C79005FA482 /* VoodooTSCSyncAMD.cpp */; };
+		C1571F5920AF4A21005FA482 /* AmdTscSync.h in Headers */ = {isa = PBXBuildFile; fileRef = C1571F4020AF4773005FA482 /* AmdTscSync.h */; };
+		C1571F5C20AF4C79005FA482 /* AmdTscSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1571F5B20AF4C79005FA482 /* AmdTscSync.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C1571F4020AF4773005FA482 /* VoodooTSCSyncAMD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoodooTSCSyncAMD.h; path = AMD/VoodooTSCSyncAMD.h; sourceTree = "<group>"; };
-		C1571F5720AF49A3005FA482 /* VoodooTSCSyncAMD.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoodooTSCSyncAMD.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1571F5B20AF4C79005FA482 /* VoodooTSCSyncAMD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VoodooTSCSyncAMD.cpp; path = AMD/VoodooTSCSyncAMD.cpp; sourceTree = "<group>"; };
+		C1571F4020AF4773005FA482 /* AmdTscSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmdTscSync.h; path = AMD/AmdTscSync.h; sourceTree = "<group>"; };
+		C1571F5720AF49A3005FA482 /* AmdTscSync.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmdTscSync.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1571F5B20AF4C79005FA482 /* AmdTscSync.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AmdTscSync.cpp; path = AMD/AmdTscSync.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +40,7 @@
 		19C28FB6FE9D52B211CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C1571F5720AF49A3005FA482 /* VoodooTSCSyncAMD.kext */,
+				C1571F5720AF49A3005FA482 /* AmdTscSync.kext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,8 +48,8 @@
 		C1571F2C20AF452F005FA482 /* AMD */ = {
 			isa = PBXGroup;
 			children = (
-				C1571F5B20AF4C79005FA482 /* VoodooTSCSyncAMD.cpp */,
-				C1571F4020AF4773005FA482 /* VoodooTSCSyncAMD.h */,
+				C1571F5B20AF4C79005FA482 /* AmdTscSync.cpp */,
+				C1571F4020AF4773005FA482 /* AmdTscSync.h */,
 			);
 			name = AMD;
 			sourceTree = "<group>";
@@ -61,16 +61,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1571F5920AF4A21005FA482 /* VoodooTSCSyncAMD.h in Headers */,
+				C1571F5920AF4A21005FA482 /* AmdTscSync.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C1571F4C20AF49A3005FA482 /* VoodooTSCSyncAMD */ = {
+		C1571F4C20AF49A3005FA482 /* AmdTscSync */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1571F5420AF49A3005FA482 /* Build configuration list for PBXNativeTarget "VoodooTSCSyncAMD" */;
+			buildConfigurationList = C1571F5420AF49A3005FA482 /* Build configuration list for PBXNativeTarget "AmdTscSync" */;
 			buildPhases = (
 				C1571F4D20AF49A3005FA482 /* Headers */,
 				C1571F4F20AF49A3005FA482 /* Resources */,
@@ -82,10 +82,10 @@
 			);
 			dependencies = (
 			);
-			name = VoodooTSCSyncAMD;
+			name = AmdTscSync;
 			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
 			productName = VoodooTSCSync;
-			productReference = C1571F5720AF49A3005FA482 /* VoodooTSCSyncAMD.kext */;
+			productReference = C1571F5720AF49A3005FA482 /* AmdTscSync.kext */;
 			productType = "com.apple.product-type.kernel-extension.iokit";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 			attributes = {
 				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "VoodooTSCSync" */;
+			buildConfigurationList = 1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "AmdTscSync" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
@@ -107,7 +107,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C1571F4C20AF49A3005FA482 /* VoodooTSCSyncAMD */,
+				C1571F4C20AF49A3005FA482 /* AmdTscSync */,
 			);
 		};
 /* End PBXProject section */
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1571F5C20AF4C79005FA482 /* VoodooTSCSyncAMD.cpp in Sources */,
+				C1571F5C20AF4C79005FA482 /* AmdTscSync.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,9 +233,9 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = AMD/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MODULE_NAME = com.yourcompany.driver.VoodooTSCSyncAMD;
+				MODULE_NAME = org.driver.AmdTscSync;
 				MODULE_VERSION = 1.0.0d1;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.voodoo.driver.${PRODUCT_NAME:rfc1034Identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = org.driver.AmdTscSync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -252,9 +252,9 @@
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = AMD/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MODULE_NAME = com.yourcompany.driver.VoodooTSCSyncAMD;
+				MODULE_NAME = org.driver.AmdTscSync;
 				MODULE_VERSION = 1.0.0d1;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.voodoo.driver.${PRODUCT_NAME:rfc1034Identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = org.driver.AmdTscSync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -263,7 +263,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "VoodooTSCSync" */ = {
+		1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "AmdTscSync" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB91DE08733DB10010E9CD /* Debug */,
@@ -272,7 +272,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1571F5420AF49A3005FA482 /* Build configuration list for PBXNativeTarget "VoodooTSCSyncAMD" */ = {
+		C1571F5420AF49A3005FA482 /* Build configuration list for PBXNativeTarget "AmdTscSync" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C1571F5520AF49A3005FA482 /* Debug */,
